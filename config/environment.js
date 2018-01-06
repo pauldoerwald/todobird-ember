@@ -5,6 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'todobird',
     environment,
     rootURL: '/',
+    apiHost: 'http://localhost:4000',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
