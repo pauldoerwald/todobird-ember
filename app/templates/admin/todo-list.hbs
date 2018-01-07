@@ -1,0 +1,11 @@
+<h2>Todo Lists for {{model.name}}</h2>
+
+<ul>
+  {{#each model.todoLists as |list|}}
+    <li>{{list.name}} {{link-to 'edit' 'admin.todo_list.edit' list.id}} <a {{action 'delete' list}} href='#'>delete</a></li>
+  {{/each}}
+</ul>
+
+{{link-to "New Todo List" 'admin.todo_list.new' model.id class="btn btn-primary btn-sm"}}
+
+{{outlet}}

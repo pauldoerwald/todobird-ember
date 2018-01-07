@@ -1,5 +1,7 @@
 <ul>
   {{#each model as |user|}}
-    <li>{{user.name}} ({{user.todoLists.length}})</li>
+    <li>{{link-to user.name 'admin.todo_list' user}} ({{user.todoLists.length}})</li>
   {{/each}}
 </ul>
+
+{{outlet}}

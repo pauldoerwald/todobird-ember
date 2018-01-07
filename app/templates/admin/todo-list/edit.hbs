@@ -1,0 +1,7 @@
+<h3>{{model.name}}</h3>
+{{#bs-form model=this onSubmit=(action "submit") as |form|}}
+  {{form.element controlType="text" label="Name" placeholder="Name" property="name"}}
+  {{form.element controlType="textarea" label="Description" placeholder="Description" property="description"}}
+  {{#bs-button type="primary" onClick=(action "submit")}}Save{{/bs-button}}
+{{/bs-form}}
+
