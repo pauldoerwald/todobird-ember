@@ -2,9 +2,11 @@
 
 <ul>
   {{#each model.todoLists as |list|}}
-    <li>{{list.name}} {{link-to 'edit' 'admin.todo_list.edit' list.id}} <a {{action 'delete' list}} href='#'>delete</a></li>
+    <li>{{list.name}} {{link-to 'edit' 'admin.todo_list.edit' list.id}} <a {{action 'delete' list}} href='#'>delete</a> {{list.currentState.stateName}}</li>
   {{/each}}
 </ul>
+
+<a {{action 'ping'}} href='#' class='btn btn-secondary btn-sm'>Ping!</a>
 
 {{link-to "New Todo List" 'admin.todo_list.new' model.id class="btn btn-primary btn-sm"}}
 
