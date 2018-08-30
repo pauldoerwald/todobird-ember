@@ -1,52 +1,21 @@
 # todobird
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Before you can use todobird-ember, make sure you set up todobird-phoenix properly.
 
-## Prerequisites
+To start the ember server:
 
-You will need the following things properly installed on your computer.
+    ember s
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/)
-* [Yarn](https://yarnpkg.com/)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
+You will have created a user on the Phoenix side, presumably user 1. Connect to:
 
-## Installation
+    http://localhost:4200/admin/users/1
 
-* `git clone <repository-url>` this repository
-* `cd todobird`
-* `yarn install`
+You should be able to create new todo lists. You can't create todos yet, unfortunately. What's really cool though, is if you open a second browser window, you'll be able to see the todo lists update over web sockets (phoenix channels). You should also be able to create new users and todolists using the Phoenix console and watch them automatically appear in the UI as well.
 
-## Running / Development
+Possible tasks:
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+* creating todos
+* upgrade to latest version of ember. Hint: use ember-cli-upgrade.
+* sharing todo lists between users, or assigning todo items to users
+* account (user) creation
+* login/authentication. Hint: use ember-simple-auth. You can do partial steps along the way by just adding a Bearer token to your requests and checking that on the server side, and then using hand-generated JWT tokens and implementing them on the Ember side before you go all the way to implementing ember-simple-auth.
